@@ -1,6 +1,7 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import HamMenu from '../components/hamMenu';
 import FooterCom from '../components/footerCom';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           HOME｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
+      <HamMenu />
       <Component {...pageProps} />
       <FooterCom />
     </>

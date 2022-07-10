@@ -1,3 +1,9 @@
+@function vw($px) {
+  @return ($px / 428) * 100vw;
+}
+@function vh($px) {
+  @return ($px / 926) * 100vh;
+}
 $bgc-green: #ecf6e0;
 $bgc-yellow: #fbf5d5;
 $bgc-blue: #5191cf;
