@@ -1,0 +1,94 @@
+@import '../styles/globalColor.scss';
+.ham_menu {
+  :global {
+    .hamcontainer {
+      position: fixed;
+      z-index: 90;
+      top: 1.125rem;
+      right: 1.125rem;
+      .burger {
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border: 2px solid $text-orange;
+        border-radius: 50%;
+        .line {
+          display: block;
+          margin: 0 auto;
+          width: 22px;
+          height: 4px;
+          background-color: $text-orange;
+          border-radius: 3px;
+          transition: all 0.25s;
+          &.top {
+            margin-top: 8px;
+            margin-bottom: 5px;
+          }
+          &.bottom {
+            margin-top: 5px;
+          }
+        }
+        &.active .top {
+          margin-top: 18px;
+          margin-bottom: -4px;
+          transform: rotate(45deg);
+        }
+        &.active .middle {
+          transform: rotate(45deg);
+        }
+        &.active .bottom {
+          margin-top: -5px;
+          transform: rotate(135deg);
+        }
+      }
+      .burger-content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 90;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $burger-content-bgc;
+        transition: all 0.25s;
+        ul {
+          display: none;
+          &.active {
+            display: block;
+          }
+          li a {
+            text-shadow: none;
+            font-size: 40px;
+            color: $text-orange;
+            &.active {
+              position: relative;
+              border-bottom: 3px solid $btn-green;
+            }
+          }
+        }
+        &.active {
+          position: fixed;
+          z-index: 70;
+          right: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          border-radius: 0;
+          ul.active {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

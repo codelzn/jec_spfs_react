@@ -1,8 +1,25 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.scss';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta charSet="utf-8" key="charset" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+          key="viewport"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <title key="title">
+          HOME｜第26回スポーツフェスティバル｜日本電子専門学校
+        </title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
