@@ -66,7 +66,7 @@ const Home: NextPage = () => {
         </section>
         <section className="concept">
           <h2>スポフェスはこういう感じ</h2>
-          <video muted autoPlay loop ref={videoRef}></video>
+          <video playsInline autoPlay muted loop ref={videoRef}></video>
           <div className="btn kg">
             <Link href="/competition">
               <a href="./competition/index.html">詳しい競技情報</a>
