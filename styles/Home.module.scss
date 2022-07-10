@@ -1,8 +1,27 @@
-@import './globalColor.scss';
+@import "./globalColor.scss";
 .homecontainer {
   :global {
+    header {
+      position: relative;
+      height: vh(704);
+      text-align: center;
+      background: url("/images/mainvisual_big.jpg") no-repeat;
+      background-size: cover;
+      .logo {
+        margin-top: vh(77);
+        height: vh(378);
+      }
+      ul {
+        padding-top: vh(20);
+        li {
+          padding-bottom: vh(10);
+          color: #fff;
+          font-size: vh(30);
+          text-shadow: #000 0px 0px 5px;
+        }
+      }
+    }
     main {
-      height: vh(500);
       background-color: skyblue;
     }
   }
