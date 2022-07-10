@@ -1,0 +1,29 @@
+@import "../styles/globalColor.scss";
+.footContainer {
+  position: relative;
+  :global {
+    .totop {
+      width: 3.125rem;
+      height: 3.125rem;
+      position: absolute;
+      right: 1.375rem;
+      bottom: 3.75rem;
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      font-size: 1rem;
+      display: block;
+      height: 2.75rem;
+      line-height: 2.75rem;
+      width: 100vw;
+      background-color: $btn-green;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
