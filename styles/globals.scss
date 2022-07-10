@@ -3,14 +3,18 @@
 * {
   margin: 0;
   padding: 0;
+  // box-sizing: border-box;
+  outline: none;
 }
 html,
 body {
-  overflow-x: hidden;
   font-size: 16px;
   font-family: "Yusei Magic", sans-serif;
   transition: all 0.25s 0s;
   scroll-behavior: smooth;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
 }
 ::-webkit-scrollbar {
   display: none;
@@ -27,3 +31,20 @@ a {
 li {
   list-style: none;
 }
+@media screen and (max-width: 1280px) {
+  body {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 834px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+

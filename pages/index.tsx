@@ -1,8 +1,23 @@
 import type { GetStaticProps, NextPage } from 'next';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
+  // videoは重いから、全部読み込んでからロードする
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoHandler = (): void => {
+    videoRef.current!.src = '/images/video.mp4';
+    videoRef.current!.addEventListener('canplay', () => {
+      if (videoRef.current!.paused) {
+        videoRef.current!.play();
+      }
+    });
+  };
+  useEffect(() => {
+    videoHandler();
+  }, []);
   return (
     <div className={styles.homecontainer}>
       <header>
@@ -23,14 +38,14 @@ const Home: NextPage = () => {
         </section>
       </header>
       <main>
-        <section className="catch color-section" data-color="#ffffff">
+        <section className="catch">
           <h2>R e ： b o o t</h2>
           <p>
             意味：２年間の中止により前回の参加者
             がいないため、0からのスタートと新しく 始める!
           </p>
         </section>
-        <section className="intro color-section" data-color="#ecf6e0">
+        <section className="intro">
           <h2>スポフェスとは</h2>
           <div className="intro_content">
             <ul>
@@ -44,17 +59,21 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className="btn ks">
-            <a href="./venue/index.html">詳しい開催情報</a>
+            <Link href="/venue">
+              <a>詳しい開催情報</a>
+            </Link>
           </div>
         </section>
-        <section className="concept color-section" data-color="#ecf6e0">
+        <section className="concept">
           <h2>スポフェスはこういう感じ</h2>
-          <video src="/images/video.mp4" muted autoPlay loop></video>
+          <video muted autoPlay loop ref={videoRef}></video>
           <div className="btn kg">
-            <a href="./competition/index.html">詳しい競技情報</a>
+            <Link href="/competition">
+              <a href="./competition/index.html">詳しい競技情報</a>
+            </Link>
           </div>
         </section>
-        <section className="message color-section" data-color="#fbf5d5">
+        <section className="message">
           <h2>
             校長＆実行委員長
             <br />
@@ -83,22 +102,28 @@ const Home: NextPage = () => {
           <h2>よくある質問</h2>
           <ul>
             <li>
-              <a href="./access/index.html">
-                <em>アクセス</em>
-                が知りたい
-              </a>
+              <Link href="/access">
+                <a>
+                  <em>アクセス</em>
+                  が知りたい
+                </a>
+              </Link>
             </li>
             <li>
-              <a href="./memory/index.html">
-                <em>思い出</em>
-                を残したい
-              </a>
+              <Link href="memory">
+                <a>
+                  <em>思い出</em>
+                  を残したい
+                </a>
+              </Link>
             </li>
             <li>
-              <a href="./notice/index.html">
-                <em>不安</em>
-                がある
-              </a>
+              <Link href="/attention">
+                <a>
+                  <em>不安</em>
+                  がある
+                </a>
+              </Link>
             </li>
             <li>
               <a href="#">
