@@ -6,6 +6,7 @@
 }
 html,
 body {
+  overflow-x: hidden;
   font-size: 16px;
   font-family: "Yusei Magic", sans-serif;
   transition: all 0.25s 0s;
@@ -13,6 +14,10 @@ body {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+img,
+video {
+  width: 100%;
 }
 
 a {

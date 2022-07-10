@@ -4,7 +4,7 @@ import styles from './footerCom.module.scss';
 
 const FooterCom: NextPage = () => {
   return (
-    <footer className={styles.footContainer}>
+    <footer className={styles.footcontainer}>
       <div className="totop">
         <a href="#">
           <Image layout='fill' src="/images/totop.svg" alt="トップへ戻る" />

@@ -1,0 +1,19 @@
+@import "../styles/globalColor.scss";
+.headcontainer {
+  height: 10vh;
+  :global {
+    h1 {
+      height: 100%;
+      display: block;
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        // height: 100%;
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
