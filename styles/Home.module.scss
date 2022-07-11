@@ -9,11 +9,17 @@
       background: url("/images/mainvisual_big.jpg") no-repeat;
       background-size: cover;
       .logo {
-        margin-top: vh(77);
-        height: vh(378);
+        margin: vh(40) auto vh(20);
+        height: vh(376);
       }
       ul {
-        padding-top: vh(20);
+        border-radius: 5px;
+        margin: 0 auto;
+        width: fit-content;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        padding: vh(20) vw(10) 0;
         li {
           padding-bottom: vh(10);
           color: #fff;
@@ -32,14 +38,14 @@
         padding-bottom: vh(40);
         h2 {
           font-size: vw(50);
-          color: $text-orange;
+          color: $catch-color;
           margin-bottom: vh(20);
         }
         p {
           line-height: 200%;
           padding: 0 vw(22);
           font-size: vw(20);
-          color: $text-orange;
+          color: $catch-text-color;
         }
       }
       .intro {
@@ -47,7 +53,7 @@
         max-width: 768px;
         height: vh(420);
         position: relative;
-        padding: vh(50) vw(22) vh(80);
+        padding: vh(50) 0 vh(80);
         .intro_content {
           height: vh(290);
           position: relative;
@@ -89,13 +95,16 @@
           display: flex;
           width: fit-content;
           height: vh(270);
-          background-color: rgba(256, 256, 256, 0.58);
+          background: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(4px);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          border-radius: 5px;
           flex-direction: column;
           justify-content: space-around;
           align-items: flex-start;
           color: $text-orange;
-          padding-left: vw(20);
-          font-size: vw(25);
+          padding: 0 vw(10);
+          font-size: 1.25rem;
           li {
             white-space: nowrap;
           }
@@ -103,20 +112,20 @@
         .btn {
           margin: 0 auto;
           position: relative;
-          width: 222px;
+          width: 200px;
           max-width: 300px;
-          height: 47px;
+          height: 40px;
           background-color: $btn-green;
           border-radius: 3px;
-          font-size: vw(25);
-          line-height: 2.875rem;
+          font-size: 1.25rem;
+          line-height: 40px;
           padding-left: 1rem;
           &::after {
             content: "";
             display: block;
             position: absolute;
-            right: 16px;
-            top: 14px;
+            right: 10%;
+            top: 10px;
             width: 22px;
             height: 22px;
             background: url("/images/btn_after.svg") no-repeat;
@@ -146,13 +155,13 @@
         .btn {
           margin: vh(20) auto 0;
           position: relative;
-          width: 222px;
+          width: 200px;
           max-width: 300px;
-          height: 47px;
+          height: 40px;
           background-color: $btn-green;
           border-radius: 3px;
-          font-size: vw(25);
-          line-height: 47px;
+          font-size: 1.25rem;
+          line-height: 40px;
           padding-left: 1rem;
           a {
             color: #fff;
@@ -162,7 +171,7 @@
             display: block;
             position: absolute;
             right: 16px;
-            top: 14px;
+            top: 10px;
             width: 22px;
             height: 22px;
             background: url("/images/btn_after.svg") no-repeat;
@@ -181,38 +190,53 @@
         .msg-item {
           margin: 0 auto;
           display: flex;
+          flex-direction: column;
+          align-items: center;
           width: 90vw;
-          // min-width: 375px;
-          // min-height: 200px;
-          height: vh(238);
           max-width: 768px;
-          max-height: 484px;
           overflow: hidden;
+          &.item2 {
+            margin-top: vh(80);
+          }
           &:first-of-type {
             margin-bottom: vh(20);
           }
           .msg-img {
-            width: 50%;
-            background: url("/images/fp_img01.jpeg") no-repeat center;
-            background-size: cover;
+            width: 70%;
+            height: 230px;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+            &.tea {
+              background: url("/images/headteacher.jpg") no-repeat;
+              background-size: cover;
+              background-position: 0 24%;
+            }
+            &.stu {
+              background: url("/images/student.jpg") no-repeat;
+              background-size: cover;
+              background-position: 0 50%;
+            }
           }
           .msg-text {
+            margin-top: vh(40);
             height: 100%;
-            background-color: #fff;
-            width: 50%;
+            width: 70%;
             h3 {
               margin-top: vh(10);
               font-size: vw(20);
               text-align: center;
             }
             p {
+              background-color: rgba(255, 255, 255, 0.5);
+              border-radius: 20px;
+              border-top: 4px solid $text-orange;
+              border-bottom: 4px solid $text-orange;
               position: relative;
               display: block;
-              max-height: 238px;
+              max-height: 150px;
               font-size: vw(16);
               margin: vh(10) vw(10);
-
-              line-height: 1.5;
+              padding: 8px;
+              line-height: 2;
               overflow-y: scroll;
             }
           }
@@ -283,17 +307,17 @@
             font-size: 1.25rem;
           }
         }
-        .intro{
+        .intro {
           ul {
             font-size: 1.5625rem;
           }
           .btn {
-            font-size: 1.5625rem;
+            font-size: 1.25rem;
           }
         }
         .concept {
           .btn {
-            font-size: 1.5625rem;
+            font-size: 1.25rem;
           }
         }
         .message {

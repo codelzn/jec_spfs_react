@@ -5,11 +5,15 @@ import styles from './headCom.module.scss';
 
 type Props = {
   bgc?: string;
-}
+};
 
-function HeadCom({ bgc = 'yellow' }: Props): JSX.Element {
+const HeadCom = ({ bgc = 'yellow' }: Props): JSX.Element => {
   return (
-    <header className={`${styles.headcontainer} ${bgc === 'yellow' ? styles.yellow : styles.green}`}>
+    <header
+      className={`${styles.headcontainer} ${
+        bgc === 'yellow' ? styles.yellow : styles.green
+      }`}
+    >
       <h1>
         <Link href="/">
           <img src="/images/logo_small.png" alt="" className="logo" />

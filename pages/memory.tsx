@@ -22,7 +22,7 @@ const Memory: NextPage = () => {
           みんなの思い出を共有しよう！
         </p>
         <p className="spfshash">
-          <a href="javascript:;">＃22日専スポフェス</a>
+          <a href="#">＃22日専スポフェス</a>
         </p>
       </section>
       <section className="sample">
