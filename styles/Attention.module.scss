@@ -1,9 +1,44 @@
 @import "./globalColor.scss";
 .attentioncontainer {
+  background-color: $bgc-yellow;
   :global {
     main {
-      height: vh(500);
-      background-color: skyblue;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 80px auto 0;
+      h2 {
+        text-align: center;
+        font-size: vh(40);
+        margin-bottom: vh(40);
+      }
+      details {
+        margin-top: vh(40);
+        width: 80%;
+      }
+      .cont {
+        ul,dl {
+          padding: 20px 30px;
+          font-size: vh(18);
+        }
+        summary {
+          position: relative;
+          font-size:vh(24);
+        }
+      }
+      .sirase {
+        margin: vh(80) auto;
+        background-color: #fff;
+        padding: 20px;
+      }
+    }
+    @media only screen and (min-width: 450px) {
+      main {
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
     }
   }
 }
