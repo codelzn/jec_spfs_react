@@ -6,7 +6,8 @@ import HeadCom from '../components/headCom';
 import React, { useState } from 'react';
 
 const Venue: NextPage = () => {
-  const [activeCon, setActiveCon] = useState<boolean>(false);
+  // まずは午前を表示する、falseの場合は午後を表示する
+  const [activeCon, setActiveCon] = useState<boolean>(true);
   const contChange = () => {
     setActiveCon(!activeCon);
   };
