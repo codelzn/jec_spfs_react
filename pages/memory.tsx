@@ -26,10 +26,10 @@ const Memory: NextPage = () => {
         </p>
       </section>
       <section className="sample">
-        <img src="../images/share1.jpg" alt="スポフェスの写真" />
-        <img src="../images/share2.jpg" alt="スポフェスの写真" />
-        <img src="../images/share3.jpg" alt="スポフェスの写真" />
-        <img src="../images/share4.jpg" alt="スポフェスの写真" />
+        <img src="/images/share1.jpg" alt="スポフェスの写真" />
+        <img src="/images/share2.jpg" alt="スポフェスの写真" />
+        <img src="/images/share3.jpg" alt="スポフェスの写真" />
+        <img src="/images/share4.jpg" alt="スポフェスの写真" />
       </section>
       <section className="notice">
         <h3>注意点</h3>
