@@ -2,6 +2,7 @@
 .headcontainer {
   width: 100vw;
   position: fixed;
+  z-index: 30;
   height: 80px;
   top: 0;
   :global {
