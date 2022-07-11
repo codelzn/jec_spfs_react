@@ -1,9 +1,247 @@
 @import "./globalColor.scss";
 .venuecontainer {
+  background-color: $bgc-green;
   :global {
     main {
-      height: vh(500);
-      background-color: skyblue;
+      max-width: 768px;
+      margin: 80px auto 0;
+      .content {
+        width: 100%;
+        .maincontent {
+          width: 85%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h2 {
+            margin-bottom: vh(40);
+            font-size: vh(40);
+          }
+          .time1 {
+            width: 100%;
+            h3 {
+              font-size: vh(30);
+              text-align: center;
+              margin-bottom: vh(22);
+            }
+            dl {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-bottom: vh(80);
+              font-size: vh(22);
+              dt {
+                margin-top: vh(24);
+              }
+              dd {
+                margin-top: vh(18);
+              }
+            }
+          }
+          .time2 {
+            width: 100%;
+            h3 {
+              font-size: vh(30);
+              text-align: center;
+              margin-bottom: vh(22);
+            }
+            ul {
+              width: 100%;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-bottom: vh(80);
+              font-size: vh(22);
+              li {
+                width: 100%;
+                margin-top: vh(24);
+                span {
+                  position: relative;
+                }
+                @for $i from 1 through 4 {
+                  &:nth-child(#{$i}) {
+                    span::after {
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      right: -26px;
+                      top: 5px;
+                      width: vh(24);
+                      height: vh(24);
+                      border-radius: 50%;
+                      border: 1px solid #ccc;
+                    }
+                  }
+                }
+                &:nth-child(1) span::after {
+                  background-color: #6888ff;
+                }
+                &:nth-child(2) span::after {
+                  background-color: #ffffff;
+                }
+                &:nth-child(3) span::after {
+                  background-color: #ff6975;
+                }
+                &:nth-child(4) span::after {
+                  background-color: #fef342;
+                }
+              }
+            }
+          }
+          .colorteam {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+              font-size: vh(30);
+              text-align: center;
+              margin-bottom: vh(22);
+            }
+            section {
+              margin-bottom: vh(40);
+              border-radius: 3px;
+              padding: vh(10) vh(30);
+              width: vw(250);
+              max-width: 430px;
+              h4 {
+                text-align: center;
+                font-size: vh(26);
+                margin-bottom: vh(20);
+              }
+              ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: vh(20);
+                gap: vh(10);
+              }
+              &.blue {
+                background-color: #6888ff;
+              }
+              &.white {
+                background-color: #ffffff;
+              }
+              &.red {
+                background-color: #ff6975;
+              }
+              &.yellow {
+                background-color: #fef342;
+              }
+            }
+          }
+          .tonext {
+            position: relative;
+            font-size: vh(28);
+            margin-bottom: vh(50);
+            a {
+              color: #000;
+            }
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              right: -24px;
+              top: 5px;
+              width: 22px;
+              height: 22px;
+              background: url("/images/btn_after.svg") no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+        .toam,
+        .topm {
+          width: 15%;
+        }
+      }
+      .content1 {
+        display: none;
+        .maincontent {
+          left: 0;
+        }
+        &.active {
+          display: flex;
+        }
+      }
+      .content2 {
+        display: none;
+        .maincontent {
+          right: 0;
+        }
+        &.active {
+          display: flex;
+        }
+      }
+      .changeTime {
+        position: fixed;
+        display: block;
+        background-color: $bgc-green;
+        height: 100vh;
+        width: 15vw;
+        right: 0;
+        top: 80px;
+        text-align: center;
+        &.active {
+          left: 0;
+          background-color: $bgc-yellow;
+        }
+        p {
+          position: absolute;
+          top: 14%;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: vh(28);
+          writing-mode: vertical-lr;
+          display: inline-block;
+          width: max-content;
+          height:max-content;
+          line-height: 2;
+          text-align: center;
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: vh(30);
+            width: 100%;
+            height: 30px;
+            background: url("/images/touch.svg") no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: 450px) {
+      main {
+        .content {
+          .maincontent {
+            h2 {
+              font-size: 2.5rem;
+            }
+            .time1,
+            .time2 {
+              h3 {
+                font-size: 1.875rem;
+              }
+            }
+            .colorteam {
+              h3 {
+                font-size: 1.875rem;
+              }
+              section {
+                h4 {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
+}
+.pm {
+  background-color: $bgc-yellow;
 }

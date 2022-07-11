@@ -1,12 +1,18 @@
 @import "../styles/globalColor.scss";
 .headcontainer {
-  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  height: 80px;
+  top: 0;
   :global {
     h1 {
       height: 100%;
+      line-height: 100%;
       display: block;
       position: relative;
       img {
+        margin: 0;
+        padding: 0;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -16,4 +22,10 @@
       }
     }
   }
+}
+.yellow {
+  background-color: $bgc-yellow;
+}
+.green {
+  background-color: $bgc-green;
 }

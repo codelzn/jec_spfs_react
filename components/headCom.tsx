@@ -1,10 +1,15 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import styles from './headCom.module.scss';
 
-const HeadCom: NextPage = () => {
+type Props = {
+  bgc?: string;
+}
+
+function HeadCom({ bgc = 'yellow' }: Props): JSX.Element {
   return (
-    <header className={styles.headcontainer}>
+    <header className={`${styles.headcontainer} ${bgc === 'yellow' ? styles.yellow : styles.green}`}>
       <h1>
         <Link href="/">
           <img src="/images/logo_small.png" alt="" className="logo" />
