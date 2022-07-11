@@ -1,9 +1,151 @@
 @import "./globalColor.scss";
 .competitioncontainer {
+  background-color: $bgc-yellow;
   :global {
     main {
-      height: vh(500);
-      background-color: skyblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 80px auto 0;
+      h2 {
+        text-align: center;
+        font-size: vh(40);
+        margin-bottom: vh(40);
+      }
+      .mainSp {
+        width: 90%;
+        margin-bottom: vh(80);
+        h3 {
+          font-size: vh(30);
+          text-align: center;
+          margin-bottom: vh(22);
+        }
+        ul {
+          margin: 0 auto;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: vw(5);
+          justify-content: space-around;
+          li {
+            width: 45%;
+            &:nth-child(1),
+            &:nth-child(2) {
+              margin-bottom: vh(50);
+            }
+            figure {
+              figcaption {
+                display: block;
+                margin-top: vh(20);
+                text-align: center;
+                a {
+                  font-size: vh(22);
+                  color: #000;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+      .attractions,
+      .side {
+        width: 90%;
+        margin-bottom: vh(80);
+        h3 {
+          font-size: vh(30);
+          text-align: center;
+          margin-bottom: vh(22);
+        }
+        ul {
+          text-align: center;
+          li {
+            &:nth-child(1) {
+              margin-bottom: vh(26);
+            }
+            a {
+              font-size: vh(22);
+              color: #000;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .side ul li a {
+        text-decoration: none;
+      }
+    }
+    .dialog {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.58);
+      &.active {
+        display: block;
+      }
+      .content {
+        border-radius: 3px;
+        width: 80vw;
+        height: 50vh;
+        position: fixed;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        h4 {
+          text-align: center;
+          display: block;
+          height: vh(60);
+          font-size: vh(40);
+          background-color: #ebbf59;
+        }
+        p {
+          display: block;
+          padding: 20px;
+          font-size: vh(26);
+          line-height: 2;
+        }
+        .close {
+          position: absolute;
+          background: url("/images/btn_close.svg") no-repeat;
+          background-size: contain;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 4%;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+    @media only screen and (min-width: 450px) {
+      main {
+        h2 {
+          font-size: 2.5rem;
+        }
+        .mainSp {
+          h3 {
+            font-size: 1.875rem;
+          }
+          ul {
+            li {
+              figure figcaption a {
+                font-size: 1.375rem;
+              }
+            }
+          }
+        }
+        .attractions {
+          h3 {
+            font-size: 1.875rem;
+          }
+        }
+      }
     }
   }
 }

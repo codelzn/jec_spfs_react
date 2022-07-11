@@ -1,8 +1,9 @@
 import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Venue.module.scss';
 import HeadCom from '../components/headCom';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Venue: NextPage = () => {
   const [activeCon, setActiveCon] = useState<boolean>(false);
@@ -16,7 +17,7 @@ const Venue: NextPage = () => {
           開催情報｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom bgc = { activeCon ? 'yellow' : 'green' } />
+      <HeadCom bgc={activeCon ? 'yellow' : 'green'} />
       <main>
         <article className={`content content1 ${activeCon ? 'active' : ''}`}>
           <section className="maincontent">
@@ -95,7 +96,9 @@ const Venue: NextPage = () => {
               </section>
             </section>
             <div className="tonext">
-              <a href="../notice/index.html">注意事項</a>
+              <Link href="/attention">
+                <a>注意事項</a>
+              </Link>
             </div>
           </section>
           <section className="toam"></section>
@@ -178,7 +181,9 @@ const Venue: NextPage = () => {
               </section>
             </section>
             <div className="tonext">
-              <a href="../notice/index.html">注意事項</a>
+              <Link href="/attention">
+                <a>注意事項</a>
+              </Link>
             </div>
           </section>
         </article>
