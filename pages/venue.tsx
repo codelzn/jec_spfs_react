@@ -23,35 +23,31 @@ const Venue: NextPage = () => {
         <h2>開催情報</h2>
         <section className="maintime">
           <table>
-            <thead>
-              <tr>
-                <th colSpan={2}>全体予定表</th>
-              </tr>
-            </thead>
+            <caption>全体予定表</caption>
             <tbody>
               <tr>
-                <td>学生入場開始</td>
-                <td>9 : 00(14 : 00)</td>
+                <th>学生入場開始</th>
+                <td>9 : 00 (14 : 00)</td>
               </tr>
               <tr>
-                <td>開会式</td>
-                <td>10 : 00(15 : 00)</td>
+                <th>開会式</th>
+                <td>10 : 00 (15 : 00)</td>
               </tr>
               <tr>
-                <td>準備運動</td>
-                <td>10 : 10(15 : 10)</td>
+                <th>準備運動</th>
+                <td>10 : 10 (15 : 10)</td>
               </tr>
               <tr>
-                <td>競技開始</td>
-                <td>10 : 40(15 : 40)</td>
+                <th>競技開始</th>
+                <td>10 : 40 (15 : 40)</td>
               </tr>
               <tr>
-                <td>競技終了</td>
-                <td>11 : 50(16 : 50)</td>
+                <th>競技終了</th>
+                <td>11 : 50 (16 : 50)</td>
               </tr>
               <tr>
-                <td>退場</td>
-                <td>12 : 00(17 : 00)</td>
+                <th>退場</th>
+                <td>12 : 00 (17 : 00)</td>
               </tr>
             </tbody>
           </table>
