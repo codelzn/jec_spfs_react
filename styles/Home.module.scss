@@ -203,17 +203,18 @@
           }
           .msg-img {
             width: 70%;
+            max-width: 368px;
             height: 230px;
             filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
             &.tea {
               background: url("/images/headteacher.jpg") no-repeat;
               background-size: cover;
-              background-position: 0 24%;
+              background-position: center 24%;
             }
             &.stu {
               background: url("/images/student.jpg") no-repeat;
               background-size: cover;
-              background-position: 0 50%;
+              background-position: center 50%;
             }
           }
           .msg-text {
@@ -330,6 +331,9 @@
               p {
                 font-size: 1rem;
               }
+            }
+            .msg-img {
+              height: 380px;
             }
           }
         }

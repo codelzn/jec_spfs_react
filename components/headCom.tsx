@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react';
 import styles from './headCom.module.scss';
 
 type Props = {
-  bgc?: string;
+  bgc?: 'white' | 'yellow' | 'green' ;
 };
 
-const HeadCom = ({ bgc = 'yellow' }: Props): JSX.Element => {
+const HeadCom = ({ bgc = 'white' }: Props): JSX.Element => {
   return (
     <header
       className={`${styles.headcontainer} ${
-        bgc === 'yellow' ? styles.yellow : styles.green
+        styles[bgc]
       }`}
     >
       <h1>

@@ -12,14 +12,20 @@ const Venue: NextPage = () => {
     setActiveCon(!activeCon);
   };
   return (
-    <div className={`${styles.venuecontainer} ${activeCon ? styles.pm : ''}`}>
+    <div className={styles.venuecontainer}>
       <Head>
         <title key="title">
           開催情報｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom bgc={activeCon ? 'yellow' : 'green'} />
+      <HeadCom bgc='yellow' />
       <main>
+        <aside className='switchbar'>
+          <ul>
+            <li onClick={() => setActiveCon(true)}>午前</li>
+            <li onClick={() => setActiveCon(false)}>午後</li>
+          </ul>
+        </aside>
         <article className={`content content1 ${activeCon ? 'active' : ''}`}>
           <section className="maincontent">
             <h2>開催情報(午前)</h2>
@@ -102,10 +108,8 @@ const Venue: NextPage = () => {
               </Link>
             </div>
           </section>
-          <section className="toam"></section>
         </article>
         <article className={`content content2 ${activeCon ? '' : 'active'}`}>
-          <section className="topm"></section>
           <section className="maincontent">
             <h2>開催情報(午後)</h2>
             <section className="time1">
@@ -188,12 +192,6 @@ const Venue: NextPage = () => {
             </div>
           </section>
         </article>
-        <aside
-          onClick={contChange}
-          className={`changeTime ${activeCon ? '' : 'active'}`}
-        >
-          <p>午 {activeCon ? '後' : '前'} は こ ち ら で す よ ！</p>
-        </aside>
       </main>
     </div>
   );

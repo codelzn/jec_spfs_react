@@ -1,14 +1,29 @@
 @import "./globalColor.scss";
 .venuecontainer {
-  background-color: $bgc-green;
+  background-color: $bgc-yellow;
   :global {
     main {
       max-width: 768px;
       margin: 80px auto 0;
+      .switchbar {
+        ul {
+          display: flex;
+          flex-direction: row;
+          li {
+            flex: 1;
+            text-align: center;
+            font-size: 1.875rem;
+            background-color: pink;
+            &:nth-child(2) {
+              background-color: skyblue;
+            }
+          }
+        }
+      }
       .content {
         width: 100%;
         .maincontent {
-          width: 85%;
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -148,10 +163,6 @@
             }
           }
         }
-        .toam,
-        .topm {
-          width: 15%;
-        }
       }
       .content1 {
         display: none;
@@ -169,46 +180,6 @@
         }
         &.active {
           display: flex;
-        }
-      }
-      .changeTime {
-        position: fixed;
-        display: block;
-        background-color: $bgc-green;
-        height: 100vh;
-        width: 15vw;
-        right: 0;
-        top: 80px;
-        text-align: center;
-        &.active {
-          left: 0;
-          background-color: $bgc-yellow;
-        }
-        p {
-          position: absolute;
-          top: 14%;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: vh(28);
-          writing-mode: vertical-lr;
-          display: inline-block;
-          width: max-content;
-          height:max-content;
-          line-height: 2;
-          text-align: center;
-          &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            margin-top: vh(30);
-            width: 100%;
-            height: 30px;
-            background: url("/images/touch.svg") no-repeat;
-            background-size: contain;
-            background-position: center;
-          }
         }
       }
     }
@@ -240,7 +211,4 @@
       }
     }
   }
-}
-.pm {
-  background-color: $bgc-yellow;
 }
