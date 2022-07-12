@@ -17,7 +17,7 @@ const Competition: NextPage = () => {
           dialog.querySelector('.close')?.addEventListener('click', e => {
             e.stopPropagation();
             dialog.className = 'dialog';
-          })
+          });
         });
     });
   };
@@ -31,7 +31,7 @@ const Competition: NextPage = () => {
           競技情報｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom bgc='yellow' />
+      <HeadCom bgc="yellow" />
       <main>
         <h2>競技情報</h2>
         <section className="mainSp">
@@ -82,15 +82,15 @@ const Competition: NextPage = () => {
                 />
                 <figcaption>
                   <a>
-                    電子学園ウルトラ
+                    電子学園
                     <br />
-                    クイズ
+                    ウルトラ クイズ
                   </a>
                 </figcaption>
               </figure>
               <div className="dialog">
                 <div className="content">
-                  <h4>電子学園ウルトラクイズ</h4>
+                  <h4 className='over'>電子学園<br />ウルトラクイズ</h4>
                   <p>
                     日本電子に関係するクイズが〇×形式で出題されま
                     す。全員参加できるので気軽に参加してみましょう！

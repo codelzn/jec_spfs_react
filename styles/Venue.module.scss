@@ -3,7 +3,6 @@
   background-color: $bgc-yellow;
   :global {
     main {
-      max-width: 768px;
       margin: 80px auto 0;
       h2 {
         text-align: center;
@@ -32,6 +31,7 @@
 
       }
       .switchbar {
+        max-width: 768px;
         position: sticky;
         top: 80px;
         z-index: 30;
@@ -208,11 +208,14 @@
     }
     @media only screen and (min-width: 450px) {
       main {
+        h2 {
+          font-size: 2.5rem;
+        }
         .content {
           .maincontent {
             .time2 {
               h3 {
-                font-size: 1.875rem;
+                font-size: 2.1875rem;
               }
             }
             .colorteam {
