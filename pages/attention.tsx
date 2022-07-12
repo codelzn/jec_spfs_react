@@ -11,7 +11,7 @@ const Attention: NextPage = () => {
           注意事項｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom />
+      <HeadCom bgc='yellow' />
       <main>
         <h2>注意事項</h2>
         <details className="cont">

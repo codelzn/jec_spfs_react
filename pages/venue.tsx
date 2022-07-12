@@ -18,180 +18,183 @@ const Venue: NextPage = () => {
           開催情報｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom bgc='yellow' />
+      <HeadCom bgc="yellow" />
       <main>
-        <aside className='switchbar'>
+        <h2>開催情報</h2>
+        <section className="maintime">
+          <table>
+            <thead>
+              <tr>
+                <th colSpan={2}>全体予定表</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>学生入場開始</td>
+                <td>9 : 00(14 : 00)</td>
+              </tr>
+              <tr>
+                <td>開会式</td>
+                <td>10 : 00(15 : 00)</td>
+              </tr>
+              <tr>
+                <td>準備運動</td>
+                <td>10 : 10(15 : 10)</td>
+              </tr>
+              <tr>
+                <td>競技開始</td>
+                <td>10 : 40(15 : 40)</td>
+              </tr>
+              <tr>
+                <td>競技終了</td>
+                <td>11 : 50(16 : 50)</td>
+              </tr>
+              <tr>
+                <td>退場</td>
+                <td>12 : 00(17 : 00)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <aside className="switchbar">
           <ul>
             <li onClick={() => setActiveCon(true)}>午前</li>
             <li onClick={() => setActiveCon(false)}>午後</li>
           </ul>
         </aside>
-        <article className={`content content1 ${activeCon ? 'active' : ''}`}>
-          <section className="maincontent">
-            <h2>開催情報(午前)</h2>
-            <section className="time1">
-              <h3>全体予定表</h3>
-              <dl>
-                <dt>9 : 00(14 : 00)</dt>
-                <dd>学生入場開始</dd>
-                <dt>10 : 00(15 : 00)</dt>
-                <dd>開会式</dd>
-                <dt>10 : 10(15 : 10)</dt>
-                <dd>準備運動</dd>
-                <dt>10 : 40(15 : 40)</dt>
-                <dd>競技開始</dd>
-                <dt>11 : 50(16 : 50)</dt>
-                <dd>競技終了</dd>
-                <dt>12 : 00(17 : 00)</dt>
-                <dd>退場</dd>
-              </dl>
-            </section>
-            <section className="time2">
-              <h3>集合時間</h3>
-              <ul>
-                <li>
-                  ９：００
-                  <span>青チーム</span>
-                </li>
-                <li>
-                  ９：１０
-                  <span>白チーム</span>
-                </li>
-                <li>
-                  ９：２０
-                  <span>赤チーム</span>
-                </li>
-                <li>
-                  ９：３０
-                  <span>黄チーム</span>
-                </li>
-              </ul>
-            </section>
-            <section className="colorteam">
-              <h3>色分け</h3>
-              <section className="blue">
-                <h4>青チーム</h4>
-                <ul>
-                  <li>Webデザイン科</li>
-                  <li>ケイタイ·アプリケーション科</li>
-                  <li>電子応用工学科</li>
-                  <li>情報ビジネスライセンス科</li>
-                  <li>電気工学科</li>
-                  <li>高度電気工学科</li>
-                </ul>
+        <div className="outside">
+          <div className={`movebox ${activeCon ? '' : 'active'}`}>
+            <article
+              className={`content content1 ${activeCon ? 'active' : ''}`}
+            >
+              <section className="maincontent">
+                <section className="time2">
+                  <h3>色別入場時間</h3>
+                  <ul>
+                    <li>
+                      ９：００
+                      <span>青チーム</span>
+                    </li>
+                    <li>
+                      ９：１０
+                      <span>白チーム</span>
+                    </li>
+                    <li>
+                      ９：２０
+                      <span>赤チーム</span>
+                    </li>
+                    <li>
+                      ９：３０
+                      <span>黄チーム</span>
+                    </li>
+                  </ul>
+                </section>
+                <section className="colorteam">
+                  <h3>色分け</h3>
+                  <section className="blue">
+                    <h4>青チーム</h4>
+                    <ul>
+                      <li>Webデザイン科</li>
+                      <li>ケイタイ·アプリケーション科</li>
+                      <li>電子応用工学科</li>
+                      <li>情報ビジネスライセンス科</li>
+                      <li>電気工学科</li>
+                      <li>高度電気工学科</li>
+                    </ul>
+                  </section>
+                  <section className="white">
+                    <h4>白チーム</h4>
+                    <ul>
+                      <li>AIシステム科</li>
+                      <li>情報システム開発科</li>
+                    </ul>
+                  </section>
+                  <section className="red">
+                    <h4>赤チーム</h4>
+                    <ul>
+                      <li>情報処理科</li>
+                    </ul>
+                  </section>
+                  <section className="yellow">
+                    <h4>黄チーム</h4>
+                    <ul>
+                      <li>ネットセキュリティ科</li>
+                      <li>高度情報処理科</li>
+                      <li>電気工事技術科</li>
+                    </ul>
+                  </section>
+                </section>
               </section>
-              <section className="white">
-                <h4>白チーム</h4>
-                <ul>
-                  <li>AIシステム科</li>
-                  <li>情報システム開発科</li>
-                </ul>
-              </section>
-              <section className="red">
-                <h4>赤チーム</h4>
-                <ul>
-                  <li>情報処理科</li>
-                </ul>
-              </section>
-              <section className="yellow">
-                <h4>黄チーム</h4>
-                <ul>
-                  <li>ネットセキュリティ科</li>
-                  <li>高度情報処理科</li>
-                  <li>電気工事技術科</li>
-                </ul>
-              </section>
-            </section>
-            <div className="tonext">
-              <Link href="/attention">
-                <a>注意事項</a>
-              </Link>
-            </div>
-          </section>
-        </article>
-        <article className={`content content2 ${activeCon ? '' : 'active'}`}>
-          <section className="maincontent">
-            <h2>開催情報(午後)</h2>
-            <section className="time1">
-              <h3>全体予定表</h3>
-              <dl>
-                <dt>9 : 00(14 : 00)</dt>
-                <dd>学生入場開始</dd>
-                <dt>10 : 00(15 : 00)</dt>
-                <dd>開会式</dd>
-                <dt>10 : 10(15 : 10)</dt>
-                <dd>準備運動</dd>
-                <dt>10 : 40(15 : 40)</dt>
-                <dd>競技開始</dd>
-                <dt>11 : 50(16 : 50)</dt>
-                <dd>競技終了</dd>
-                <dt>12 : 00(17 : 00)</dt>
-                <dd>退場</dd>
-              </dl>
-            </section>
-            <section className="time2">
-              <h3>集合時間</h3>
-              <ul>
-                <li>
-                  １３：３０
-                  <span>青チーム</span>
-                </li>
+            </article>
+            <article
+              className={`content content2 ${activeCon ? '' : 'active'}`}
+            >
+              <section className="maincontent">
+                <section className="time2">
+                  <h3>色別入場時間</h3>
+                  <ul>
+                    <li>
+                      １３：３０
+                      <span>青チーム</span>
+                    </li>
 
-                <li>
-                  １３：４０
-                  <span>白チーム</span>
-                </li>
+                    <li>
+                      １３：４０
+                      <span>白チーム</span>
+                    </li>
 
-                <li>
-                  １３：５０
-                  <span>赤チーム</span>
-                </li>
+                    <li>
+                      １３：５０
+                      <span>赤チーム</span>
+                    </li>
 
-                <li>
-                  １４：００
-                  <span>黄チーム</span>
-                </li>
-              </ul>
-            </section>
-            <section className="colorteam">
-              <h3>色分け</h3>
-              <section className="blue">
-                <h4>青チーム</h4>
-                <ul>
-                  <li>アニメーション科</li>
-                  <li>アニメーション研究科</li>
-                  <li>コンピュータグラッフィックス研究科</li>
-                  <li>CG映画製作科</li>
-                </ul>
+                    <li>
+                      １４：００
+                      <span>黄チーム</span>
+                    </li>
+                  </ul>
+                </section>
+                <section className="colorteam">
+                  <h3>色分け</h3>
+                  <section className="blue">
+                    <h4>青チーム</h4>
+                    <ul>
+                      <li>アニメーション科</li>
+                      <li>アニメーション研究科</li>
+                      <li>コンピュータグラッフィックス研究科</li>
+                      <li>CG映画製作科</li>
+                    </ul>
+                  </section>
+                  <section className="white">
+                    <h4>白チーム</h4>
+                    <ul>
+                      <li>コンピュータグラッフィックス科</li>
+                      <li>グラッフィックデザイン科</li>
+                    </ul>
+                  </section>
+                  <section className="red">
+                    <h4>赤チーム</h4>
+                    <ul>
+                      <li>ゲーム製作科</li>
+                    </ul>
+                  </section>
+                  <section className="yellow">
+                    <h4>黄チーム</h4>
+                    <ul>
+                      <li>ゲーム企画科</li>
+                      <li>ゲーム製作研究科</li>
+                    </ul>
+                  </section>
+                </section>
               </section>
-              <section className="white">
-                <h4>白チーム</h4>
-                <ul>
-                  <li>コンピュータグラッフィックス科</li>
-                  <li>グラッフィックデザイン科</li>
-                </ul>
-              </section>
-              <section className="red">
-                <h4>赤チーム</h4>
-                <ul>
-                  <li>ゲーム製作科</li>
-                </ul>
-              </section>
-              <section className="yellow">
-                <h4>黄チーム</h4>
-                <ul>
-                  <li>ゲーム企画科</li>
-                  <li>ゲーム製作研究科</li>
-                </ul>
-              </section>
-            </section>
-            <div className="tonext">
-              <Link href="/attention">
-                <a>注意事項</a>
-              </Link>
-            </div>
-          </section>
-        </article>
+            </article>
+          </div>
+        </div>
+        <div className="tonext">
+          <Link href="/attention">
+            <a>注意事項</a>
+          </Link>
+        </div>
       </main>
     </div>
   );

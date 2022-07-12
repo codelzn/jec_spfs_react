@@ -31,7 +31,7 @@ const Competition: NextPage = () => {
           競技情報｜第26回スポーツフェスティバル｜日本電子専門学校
         </title>
       </Head>
-      <HeadCom />
+      <HeadCom bgc='yellow' />
       <main>
         <h2>競技情報</h2>
         <section className="mainSp">

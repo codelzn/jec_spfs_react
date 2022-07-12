@@ -9,7 +9,7 @@ const Memory: NextPage = () => {
       <Head>
         <title key="title">思い出｜第26回スポーツフェスティバル｜日本電子専門学校</title>
       </Head>
-      <HeadCom />
+      <HeadCom bgc='yellow' />
       <main>
       <h2>思い出を残しましょう</h2>
       <section className="func">
