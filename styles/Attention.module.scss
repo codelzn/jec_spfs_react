@@ -4,27 +4,59 @@
   :global {
     main {
       width: 90%;
+      max-width: 768px;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 80px auto 0;
       h2 {
         text-align: center;
-        font-size: vh(40);
+        font-size: 2.1875rem;
         margin-bottom: vh(40);
       }
       details {
         margin-top: vh(40);
-        width: 80%;
+        width: 100%;
       }
       .cont {
-        ul,dl {
-          padding: 20px 30px;
-          font-size: vh(18);
+        i {
+          font-style: normal;
+          color: red;
+          &.b {
+            color: blue;
+          }
         }
         summary {
           position: relative;
-          font-size:vh(24);
+          font-size:1.5rem;
+        }
+        ul,dl {
+          padding: 20px 30px;
+          font-size: 1.125rem;
+          li,dd {
+            margin-top: vh(25);
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+          dd {
+            font-size: 1rem;
+          }
+          dt {
+            padding-left: 6px;
+            position: relative;
+            margin: vh(20) 0;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 4px;
+              height: 100%;
+              background-color: $text-orange;
+            }
+          }
         }
       }
       .sirase {
