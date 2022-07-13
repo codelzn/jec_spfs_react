@@ -9,7 +9,7 @@ const Access: NextPage = () => {
       <Head>
         <title key="title">アクセス｜第26回スポーツフェスティバル｜日本電子専門学校</title>
       </Head>
-      <HeadCom bgc='green' />
+      <HeadCom bgc='yellow' />
       <main>
       <h2>アクセス</h2>
       <section className="syuugo">

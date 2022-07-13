@@ -22,7 +22,7 @@ const Memory: NextPage = () => {
           みんなの思い出を共有しよう！
         </p>
         <p className="spfshash">
-          <a href="#">＃22日専スポフェス</a>
+          <a href="instagram://tag?name=22日専スポフェス">＃22日専スポフェス</a>
         </p>
       </section>
       <section className="sample">
