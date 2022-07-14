@@ -1,5 +1,5 @@
 import type { GetStaticProps, NextPage } from 'next';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 
@@ -14,7 +14,17 @@ const Home: NextPage = () => {
       }
     });
   };
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [audioActive, setAudioActive] = useState<boolean>(false);
+  const loadAudio = (): void => {
+    setAudio(new Audio('/images/bgmusic.mp3'));
+  };
+  const playMusic = () => {
+    audio?.paused ? audio.play() : audio?.pause();
+    setAudioActive(!audioActive);
+  };
   useEffect(() => {
+    loadAudio();
     videoHandler();
   }, []);
   return (
@@ -65,7 +75,11 @@ const Home: NextPage = () => {
         </section>
         <section className="concept">
           <h2>スポフェスはこういう感じ</h2>
-          <video playsInline autoPlay muted loop ref={videoRef}></video>
+          <div className="conmain">
+            <video playsInline autoPlay muted loop ref={videoRef}></video>
+            <div className="bgmusic" onClick={playMusic}></div>
+            <div className={`bgtext ${audioActive ? 'active' : ''}`}>現場の雰囲気を感じてみませんか？</div>
+          </div>
           <div className="btn kg">
             <Link href="/competition">
               <a href="./competition/index.html">詳しい競技情報</a>
@@ -131,7 +145,7 @@ const Home: NextPage = () => {
               </Link>
             </li>
             <li>
-              <a href="#">
+              <a>
                 <em>☎︎</em>
                 他の質問
               </a>

@@ -137,6 +137,7 @@
         }
       }
       .concept {
+        position: relative;
         padding-bottom: vh(30);
         h2 {
           font-size: vw(35);
@@ -145,12 +146,51 @@
           margin-bottom: vh(30);
           text-align: center;
         }
-        video {
-          display: block;
-          position: relative;
-          margin: 0 auto;
+        .conmain {
           max-width: 768px;
-          width: 90vw;
+          margin: 0 auto;
+          position: relative;
+          video {
+            margin: 0 auto;
+            display: block;
+            max-width: 768px;
+            width: 90vw;
+          }
+          .bgmusic {
+            position: absolute;
+            top: 6%;
+            left: 8%;
+            width: 25px;
+            height: 25px;
+            // background-color: rgba(0, 0, 0, 1);
+            z-index: 1;
+            background: url("/images/music.png");
+            background-size: contain;
+          }
+          .bgtext {
+            font-size: .9375rem;
+            padding-left:30px;
+            padding-right: 10px;
+            background-color: $text-orange;
+            box-shadow: 0px 0px 4px rgb(0, 0, 0);
+            border-radius: 20px;
+            position: absolute;
+            top: 6%;
+            left: 20%;
+            &.active {
+              display: none;
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              height: 100%;
+              width: 24px;
+              top: 0;
+              left: 0;
+              background: url('/images/left.png') no-repeat;
+              background-size: contain;
+            }
+          }
         }
         .btn {
           margin: vh(20) auto 0;
