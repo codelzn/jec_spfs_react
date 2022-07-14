@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   };
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [audioActive, setAudioActive] = useState<boolean>(false);
-  const loadAudio = (): void => {
+  const loadAudio = () => {
     setAudio(new Audio('/images/bgmusic.mp3'));
   };
   const playMusic = () => {
