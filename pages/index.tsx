@@ -32,11 +32,13 @@ const Home: NextPage = () => {
       <header>
         <section className="mainVisual">
           <h1>
-            <img
-              className="logo"
-              src="/images/spfs_logo.svg"
-              alt="スポーツフェスティバルのロゴ"
-            />
+            <picture>
+              <img
+                className="logo"
+                src="/images/spfs_logo.svg"
+                alt="スポーツフェスティバルのロゴ"
+              />
+            </picture>
           </h1>
           <ul>
             <li>8月18日（木）</li>
@@ -64,7 +66,9 @@ const Home: NextPage = () => {
               <li>約3000人参加</li>
             </ul>
             <p>
-              <img src="/images/intro.jpg" alt="みんなの写真" />
+              <picture>
+                <img src="/images/intro.jpg" alt="みんなの写真" />
+              </picture>
             </p>
           </div>
           <div className="btn ks">
@@ -78,7 +82,9 @@ const Home: NextPage = () => {
           <div className="conmain">
             <video playsInline autoPlay muted loop ref={videoRef}></video>
             <div className="bgmusic" onClick={playMusic}></div>
-            <div className={`bgtext ${audioActive ? 'active' : ''}`}>現場の雰囲気を感じてみませんか？</div>
+            <div className={`bgtext ${audioActive ? 'active' : ''}`}>
+              現場の雰囲気を感じてみませんか？
+            </div>
           </div>
           <div className="btn kg">
             <Link href="/competition">

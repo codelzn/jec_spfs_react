@@ -39,7 +39,9 @@ const Competition: NextPage = () => {
           <ul>
             <li>
               <figure>
-                <img src="../images/sport/sp1.png" alt="大玉送り" />
+                <picture>
+                  <img src="../images/sport/sp1.png" alt="大玉送り" />
+                </picture>
                 <figcaption>
                   <a>大玉送り</a>
                 </figcaption>
@@ -59,7 +61,9 @@ const Competition: NextPage = () => {
             </li>
             <li>
               <figure>
-                <img src="../images/sport/sp2.png" alt="玉入れ" />
+                <picture>
+                  <img src="../images/sport/sp2.png" alt="玉入れ" />
+                </picture>
                 <figcaption>
                   <a>玉入れ</a>
                 </figcaption>
@@ -76,10 +80,12 @@ const Competition: NextPage = () => {
             </li>
             <li>
               <figure>
-                <img
-                  src="../images/sport/sp3.png"
-                  alt="電子学園ウルトラクイズ"
-                />
+                <picture>
+                  <img
+                    src="../images/sport/sp3.png"
+                    alt="電子学園ウルトラクイズ"
+                  />
+                </picture>
                 <figcaption>
                   <a>
                     電子学園
@@ -90,7 +96,11 @@ const Competition: NextPage = () => {
               </figure>
               <div className="dialog">
                 <div className="content">
-                  <h4 className='over'>電子学園<br />ウルトラクイズ</h4>
+                  <h4 className="over">
+                    電子学園
+                    <br />
+                    ウルトラクイズ
+                  </h4>
                   <p>
                     日本電子に関係するクイズが〇×形式で出題されま
                     す。全員参加できるので気軽に参加してみましょう！

@@ -9,8 +9,10 @@
       background: url("/images/mainvisual_big.jpg") no-repeat;
       background-size: cover;
       .logo {
+        position: relative;
         margin: vh(40) auto vh(20);
         height: vh(376);
+        width: 100%;
       }
       ul {
         border-radius: 5px;

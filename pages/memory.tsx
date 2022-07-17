@@ -7,41 +7,47 @@ const Memory: NextPage = () => {
   return (
     <div className={styles.memorycontainer}>
       <Head>
-        <title key="title">思い出｜第26回スポーツフェスティバル｜日本電子専門学校</title>
+        <title key="title">
+          思い出｜第26回スポーツフェスティバル｜日本電子専門学校
+        </title>
       </Head>
-      <HeadCom bgc='yellow' />
+      <HeadCom bgc="yellow" />
       <main>
-      <h2>思い出を残しましょう</h2>
-      <section className="func">
-        <h3>共有方法</h3>
-        <p>
-          スポフェスオリジナル
-          <br />
-          ハッシュタグで<i>Instagram</i>へ投稿し
-          <br />
-          みんなの思い出を共有しよう！
-        </p>
-        <p className="spfshash">
-          <a href="instagram://tag?name=22日専スポフェス">＃22日専スポフェス</a>
-        </p>
-      </section>
-      <section className="sample">
-        <img src="/images/share1.jpg" alt="スポフェスの写真" />
-        <img src="/images/share2.jpg" alt="スポフェスの写真" />
-        <img src="/images/share3.jpg" alt="スポフェスの写真" />
-        <img src="/images/share4.jpg" alt="スポフェスの写真" />
-      </section>
-      <section className="notice">
-        <h3>注意点</h3>
-        <p>
-          公序良俗に反する行為はお止め下さい。
-          <br />
-          アプリケーションの動作環境により生じるいかなる損害については、当方が責任を負うものではありません。
-          <br />
-          投稿によって発生したトラブルにつきましても、<br />当方が一切責任を負うものではありません。
-        </p>
-      </section>
-    </main>
+        <h2>思い出を残しましょう</h2>
+        <section className="func">
+          <h3>共有方法</h3>
+          <p>
+            スポフェスオリジナル
+            <br />
+            ハッシュタグで<i>Instagram</i>へ投稿し
+            <br />
+            みんなの思い出を共有しよう！
+          </p>
+          <p className="spfshash">
+            <a href="instagram://tag?name=22日専スポフェス">
+              ＃22日専スポフェス
+            </a>
+          </p>
+        </section>
+          <picture className="sample">
+            <img src="/images/share1.jpg" alt="スポフェスの写真" />
+            <img src="/images/share2.jpg" alt="スポフェスの写真" />
+            <img src="/images/share3.jpg" alt="スポフェスの写真" />
+            <img src="/images/share4.jpg" alt="スポフェスの写真" />
+          </picture>
+        <section className="notice">
+          <h3>注意点</h3>
+          <p>
+            公序良俗に反する行為はお止め下さい。
+            <br />
+            アプリケーションの動作環境により生じるいかなる損害については、当方が責任を負うものではありません。
+            <br />
+            投稿によって発生したトラブルにつきましても、
+            <br />
+            当方が一切責任を負うものではありません。
+          </p>
+        </section>
+      </main>
     </div>
   );
 };
