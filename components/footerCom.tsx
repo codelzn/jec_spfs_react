@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import styles from './footerCom.module.scss';
 
 const FooterCom: NextPage = () => {
@@ -7,7 +6,9 @@ const FooterCom: NextPage = () => {
     <footer className={styles.footcontainer}>
       <div className="totop">
         <a href="#">
-          <Image layout='fill' src="/images/totop.svg" alt="トップへ戻る" />
+          <picture>
+            <img src="/images/totop.svg" alt="トップへ戻る" />
+          </picture>
         </a>
       </div>
       <p>
